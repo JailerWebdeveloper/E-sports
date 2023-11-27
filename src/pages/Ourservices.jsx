@@ -1,32 +1,66 @@
-import { Fragment,useState } from "react";
+import { Fragment, useState } from "react";
 import Wallpaper from "../assets/Wallpaper.jpg";
 import Navbar from "../components/Navbar";
 import Cards from "../components/Cards";
 
 const Ourservices = () => {
-
-    const [cardinfo, setcardinfo] = useState([
-        {
-            title: "I SEMESTRE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-        },
-        {
-            title: "II SEMESTRE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-        },
-        {
-            title: "III SEMESTRE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-        },
-        {
-            title: "IV SEMESTRE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-        },
-        {
-            title: "V SEMESTRE",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-        }
-    ])
+  const [cardinfo, setcardinfo] = useState([
+    {
+      title: "I SEMESTRE",
+      subtitle: "Fundamentos de E-sports y Desarrollo personal",
+      description: [
+        "introduccion a los e-sports",
+        "introduccion al gaming",
+        "introduccion al marketing",
+        "introduccion a la gestion de negocios",
+        "introduccion a la gestion de equipos",
+      ],
+    },
+    {
+      title: "II SEMESTRE",
+      subtitle: "Fundamentos de E-sports y Desarrollo personal",
+      description: [
+        "introduccion a los e-sports",
+        "introduccion al gaming",
+        "introduccion al marketing",
+        "introduccion a la gestion de negocios",
+        "introduccion a la gestion de equipos",
+      ],
+    },
+    {
+      title: "III SEMESTRE",
+      subtitle: "Fundamentos de E-sports y Desarrollo personal",
+      description: [
+        "introduccion a los e-sports",
+        "introduccion al gaming",
+        "introduccion al marketing",
+        "introduccion a la gestion de negocios",
+        "introduccion a la gestion de equipos",
+      ],
+    },
+    {
+      title: "IV SEMESTRE",
+      subtitle: "Fundamentos de E-sports y Desarrollo personal",
+      description: [
+        "introduccion a los e-sports",
+        "introduccion al gaming",
+        "introduccion al marketing",
+        "introduccion a la gestion de negocios",
+        "introduccion a la gestion de equipos",
+      ],
+    },
+    {
+      title: "V SEMESTRE",
+      subtitle: "Fundamentos de E-sports y Desarrollo personal",
+      description: [
+        "introduccion a los e-sports",
+        "introduccion al gaming",
+        "introduccion al marketing",
+        "introduccion a la gestion de negocios",
+        "introduccion a la gestion de equipos",
+      ],
+    },
+  ]);
   return (
     <Fragment>
       <Navbar />
@@ -51,7 +85,12 @@ const Ourservices = () => {
           </div>
           <div className="grid md:grid-cols-3 grid-cols-1 place-content-center place-items-center gap-5 grid-flow-row">
             {cardinfo.map((card, index) => (
-              <Cards key={index} title={card.title} description={card.description} />
+              <Cards
+                key={index}
+                title={card.title}
+                subtitle={card.subtitle}
+                description={card.description}
+              />
             ))}
           </div>
         </div>
