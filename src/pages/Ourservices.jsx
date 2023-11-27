@@ -7,19 +7,23 @@ const Ourservices = () => {
 
     const [cardinfo, setcardinfo] = useState([
         {
-            title: "GAMER",
+            title: "I SEMESTRE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
         },
         {
-            title: "GAMER",
+            title: "II SEMESTRE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
         },
         {
-            title: "GAMER",
+            title: "III SEMESTRE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
         },
         {
-            title: "GAMER",
+            title: "IV SEMESTRE",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+        },
+        {
+            title: "V SEMESTRE",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
         }
     ])
@@ -33,7 +37,7 @@ const Ourservices = () => {
         }}
       >
         <div className="hero-overlay bg-opacity-60 bg-black  "></div>
-        <div className="w-full h-full flex justify-center flex-col items-center text-neutral-content">
+        <div className="w-full h-full flex justify-center p-5 flex-col items-center text-neutral-content">
           <div className="text-center text-white w-3/5 tracking-wide  items-center  break-all flex flex-col gap-5  my-2 p-4">
             <p className="text-6xl uppercase  font-bold">
               Programa de formacion academico
@@ -45,11 +49,10 @@ const Ourservices = () => {
               este hobby como profesion de negocios o proyecto de vida
             </p>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 place-content-strech gap-5 grid-flow-row">
-            {cardinfo.map((card) => (
-              <Cards title={card.title} description={card.description} />
-            ))
-            }
+          <div className="grid md:grid-cols-3 grid-cols-1 place-content-center place-items-center gap-5 grid-flow-row">
+            {cardinfo.map((card, index) => (
+              <Cards key={index} title={card.title} description={card.description} />
+            ))}
           </div>
         </div>
       </div>
