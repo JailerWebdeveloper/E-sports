@@ -1,0 +1,60 @@
+import { Fragment,useState } from "react";
+import Wallpaper from "../assets/Wallpaper.jpg";
+import Navbar from "../components/Navbar";
+import Cards from "../components/Cards";
+
+const Ourservices = () => {
+
+    const [cardinfo, setcardinfo] = useState([
+        {
+            title: "GAMER",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+        },
+        {
+            title: "GAMER",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+        },
+        {
+            title: "GAMER",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+        },
+        {
+            title: "GAMER",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+        }
+    ])
+  return (
+    <Fragment>
+      <Navbar />
+      <div
+        className="hero min-h-screen bg-blend-darken z-0"
+        style={{
+          backgroundImage: "url(" + Wallpaper + ")",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60 bg-black  "></div>
+        <div className="w-full h-full flex justify-center flex-col items-center text-neutral-content">
+          <div className="text-center text-white w-3/5 tracking-wide  items-center  break-all flex flex-col gap-5  my-2 p-4">
+            <p className="text-6xl uppercase  font-bold">
+              Programa de formacion academico
+            </p>
+            <p className="uppercase">gestion y administracion de gaming</p>
+            <p className="uppercase w-5/6">
+              Carrera diseñada para jovenes, jugadores, influencers y
+              aficionados a los videojuegos que quieran conocer y conciderar
+              este hobby como profesion de negocios o proyecto de vida
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 grid-cols-1 place-content-strech gap-5 grid-flow-row">
+            {cardinfo.map((card) => (
+              <Cards title={card.title} description={card.description} />
+            ))
+            }
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+export default Ourservices;

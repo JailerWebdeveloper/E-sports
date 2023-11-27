@@ -10,10 +10,13 @@ const Navbar = () => {
             <img src={Nemesislogo} alt="Logo" className="w-40" />
           </a>
           <nav className="md:ml-auto md:flex gap-5 flex-wrap items-center text-base hidden justify-center">
-            <a className="nav-link">First Link</a>
-            <a className="nav-link">Second Link</a>
-            <a className="nav-link">Third Link</a>
-            <a className="nav-link">Fourth Link</a>
+            <a className="nav-link">Home</a>
+            <a className="nav-link">Eventos</a>
+            <a className="nav-link">Renta</a>
+            <a className="nav-link">Servicios</a>
+            <a className="nav-link">Sala</a>
+            <a className="nav-link">Torneos</a>
+
           </nav>
         </div>
       </header>
