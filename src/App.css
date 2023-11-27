@@ -1,0 +1,35 @@
+/* navbar.css */
+.nav-link {
+    position: relative;
+    color: white;
+    transition: color 0.3s ease; /* Transición de color al hacer hover */
+  
+    /* Barra debajo del enlace */
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #2196F3; /* Color de la barra debajo del enlace */
+      transition: width 0.3s ease; /* Transición de la anchura al hacer hover */
+    }
+  
+    &:hover {
+      color: #2196F3; /* Nuevo color al hacer hover */
+    }
+  
+    &:hover:after {
+      width: 100%; /* Mostrar la barra completa al hacer hover */
+    }
+  }
+  
+
+  /* Agrega estas reglas al archivo de estilos (por ejemplo, styles.css) */
+.border-rgb {
+    border-image: linear-gradient(to right, red, green, blue); /* Cambia los colores según tus preferencias */
+    border-image-slice: 1;
+  }
+
+
