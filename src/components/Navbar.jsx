@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Nemesislogo from "../assets/Nemesislogo.png";
-import "../App.css"
+import "../App.css";
+import { Icon } from "@iconify/react";
 const Navbar = () => {
   return (
     <Fragment>
@@ -10,13 +11,36 @@ const Navbar = () => {
             <img src={Nemesislogo} alt="Logo" className="w-40" />
           </a>
           <nav className="md:ml-auto md:flex gap-5 flex-wrap items-center text-base hidden justify-center">
-            <a href="/" className="nav-link">Home</a>
-            <a className="nav-link">Eventos</a>
-            <a className="nav-link">Renta</a>
-            <a href="/service" className="nav-link">Servicios</a>
-            <a className="nav-link">Sala</a>
-            <a className="nav-link">Torneos</a>
-
+            <div className="flex gap-2 nav-link items-center">
+              <Icon icon="ph:game-controller" />
+              <a href="/" className=" ">
+                Home
+              </a>
+            </div>
+            <div className="flex gap-2 nav-link items-center">
+              <Icon icon="material-symbols:event-available-rounded" />{" "}
+              <a href="/" className=" ">
+                Eventos
+              </a>
+            </div>
+            <div className="flex gap-2 nav-link items-center">
+              <Icon icon="fluent:service-bell-16-filled" />
+              <a href="/service" className="nav-link">
+                Servicios
+              </a>
+            </div>
+            <div className="flex gap-2 nav-link items-center">
+              <Icon icon="icon-park-twotone:game-console-one" />
+              <a href="/" className=" ">
+                Sala
+              </a>
+            </div>
+            <div className="flex gap-2 nav-link items-center">
+              <Icon icon="material-symbols:trophy-rounded" />{" "}
+              <a href="/" className=" ">
+                Torneos
+              </a>
+            </div>
           </nav>
         </div>
       </header>

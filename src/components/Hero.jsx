@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <div className="hero-overlay bg-opacity-50 bg-black  "></div>
         <div className="w-full h-full text-justify text-neutral-content">
-          <div className="grid  grid-cols-2  place-items-start    p-10">
+          <div className="grid  grid-cols-1 md:grid-cols-2  place-items-start    p-10">
             <div className=" rounded-xl w-full flex flex-col  gap-4 justify-center items-center  ">
               {/* Video */}
               <iframe
